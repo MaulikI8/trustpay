@@ -26,8 +26,7 @@ const ENV = {
 };
 
 if (!ENV.SUPABASE.URL || !ENV.SUPABASE.KEY) {
-  console.error('❌ FATAL ERROR: Supabase variables are missing! Check your .env path.');
-  process.exit(1);
+  console.error('❌ FATAL ERROR: Supabase variables are missing in env.config! SUPABASE_URL:', !!ENV.SUPABASE.URL);
 }
 
 module.exports = ENV;
