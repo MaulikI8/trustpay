@@ -1,4 +1,5 @@
-const { v4: uuidv4 } = require('uuid');
+const crypto = require('crypto');
+const uuidv4 = () => crypto.randomUUID();
 const walletModel = require('../models/walletModel');
 const transactionModel = require('../models/offlineTransactionModel');
 const { signData, verifySignature } = require('../utils/cryptoUtils');
